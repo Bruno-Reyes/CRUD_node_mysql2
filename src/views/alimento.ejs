@@ -1,0 +1,58 @@
+<% include partials/header %>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+          <% if(data){ %>
+            <table class="table">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col"Z>#</th> 
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">KilCal.</th>
+                    <th scope="col">Unidad</th>
+                    <th scope="col">-</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for (var i=0; i < data.length; i++){ %>
+                        <tr class="table-info">
+                            <th scope="row"><%= (i+1) %></td>
+                            <td><%= data[i].tip_ali %></td>
+                            <td><%= data[i].nom_ali %></td>
+                            <td><%= data[i].kil_cal %></td>
+                            <td><%= data[i].uni_med %></td>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <a href="/delete/<%= data[i].id_ali %>" class="btn btn-danger"><i class="fas fa-eraser"></i></a>
+                                    <a href="/edit/<%= data[i].id_ali %>" class="btn btn-warning"><i class="far fa-edit"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    <%}%>
+                  
+                </tbody>
+              </table>
+              
+              <%} else{ %>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Upps!</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Vacio... :(</h5>
+                          <p class="card-text">Al parecer no hay registros , pero si deseas puedes ingresar uno nuevo , crack :)</p>
+                        </div>
+                      </div>
+                <% } %>
+      </div>
+      <div class="col-sm">
+        
+      </div>
+    </div>
+  </div>
+
+    <% include partials/footer %>
+    

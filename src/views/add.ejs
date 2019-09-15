@@ -1,0 +1,63 @@
+<% include partials/header %>
+<div class="container mt-5">
+        <div class="row">
+                <div class="col-sm"></div>
+                  <div class="col-sm">
+                
+                <div class="card text-right" style="width:20rem;">
+                                                <div class="card-body">
+                                                        <form action="/add" method="POST" name="add" autocomplete="off">
+                                                        <div class="form-group">
+                                                                <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                        <label class="input-group-text" for="inputGroupSelect01">Grupo: </label>
+                                                                        </div>
+                                                                        <select class="custom-select" id="inputGroupSelect01" name="tip_ali">
+                                                                        <option selected>Elige...</option>
+                                                                        <option >Verdura</option>
+                                                                        <option >Fruta</option>
+                                                                        <option >Origen Animal</option>
+                                                                        <option >Leguminosa</option>
+                                                                        <option >Leche y Sustitutos</option>
+                                                                        <option >Grasas</option>
+                                                                        <option >Colacion</option>
+                                                                        </select>
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                    <label for="Alimento">Nombre del Alimento:</label>
+                                                                    <input type="text" name="nom_ali" class="form-control" id="Alimento" placeholder="Cual es su nombre?">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                    <label for="KiloCalorias">KiloCalorias:</label>
+                                                                    <input type="text" name="kil_cal" class="form-control" id="KiloCalorias" placeholder="Cuantas kilocalorias contiene?">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                        <div class="input-group mb-3">
+                                                                                <div class="input-group-prepend">
+                                                                                <label class="input-group-text" for="inputGroupSelect01">Unidad: </label>
+                                                                                </div>
+                                                                                <select class="custom-select" id="inputGroupSelect01" name="uni_med">
+                                                                                <option selected>Elige...</option>
+                                                                                <option >Pieza(s)</option>
+                                                                                <option >Cucharada(s)</option>
+                                                                                <option >Taza(s)</option>
+                                                                                <option >Bolsa(s)</option>
+                                                                                <option >Gramos</option>
+                                                                                <option >Cucharadita(s)</option>
+                                                                                <option >Rebanada(s)</option>
+                                                                                <option >Disparo(s)</option>
+                                                                                <option >Lata(s)</option>
+                                                                                <option >-</option>
+                                                                                </select>
+                                                                        </div>
+                                                        </div>    
+                                                        <button type="submit" class="btn btn-outline-success">Registrar</button>
+                                        </form>
+                                </div>
+                </div>
+                  </div>
+                  <div class="col-sm"></div>
+        </div>
+</div>
+<% include partials/footer %>
